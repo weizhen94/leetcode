@@ -39,8 +39,7 @@ public class Solution1 {
         } 
 
         Arrays.sort(nums1);
-        System.out.println(Arrays.toString(nums1));
-        System.out.println(m);  
+        System.out.println(Arrays.toString(nums1)); 
     }
 
     public static void main(String[] args) {
