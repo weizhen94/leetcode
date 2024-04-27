@@ -47,7 +47,9 @@ public class Solution3 {
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-    public int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums){
+
+        if (nums.length == 0) return 0;
 
         Arrays.sort(nums); 
 
@@ -75,7 +77,13 @@ public class Solution3 {
         }
 
         Arrays.sort(newNums);
-        System.out.println(Arrays.toString(newNums));
+        System.out.println("newNums: " + Arrays.toString(newNums));
+
+        for (int n = 0; n < nums.length; n++){
+            nums[n] = newNums[n]; 
+        }
+
+        System.out.println("nums: " + Arrays.toString(nums)); 
 
         return k;
         
@@ -85,7 +93,7 @@ public class Solution3 {
 
         Solution3 solution = new Solution3(); 
 
-        int[] nums = {1, 1, 2}; 
+        int[] nums = {0,0,1,1,1,2,2,3,3,4}; 
 
         System.out.println(solution.removeDuplicates(nums)); 
     }
